@@ -70,6 +70,7 @@ module.exports = class LinkedList {
     return undefined;
   }
 
+  
   // Big O - o(n) //
   map(callback) {
     if (!this.head) {
@@ -82,5 +83,20 @@ module.exports = class LinkedList {
       currentNode = currentNode.next;
     }
     return this;
+  }
+  findLast() {
+    let current = this.head;
+    if (!this.head) {
+      logger.log(logger.INFO, 'Empty stack - value not found');
+      return null;
+    }
+  
+    while (current) {
+      if (current.next === null) {
+        return current.value;
+      }
+      current = current.next;
+    }
+    return undefined;
   }
 };
