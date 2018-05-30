@@ -1,51 +1,41 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Stacks and Queues Data Structures
-====
+# Lab 10 - Stacks
 
-## To Submit this Assignment
-* Read this document entirely and estimate how long this assignment will take.
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Protect your repository's `master` branch by activating `continuous-integration/travis-ci` status checks
-* Create a pull request from your `lab` + `<your name>` branch to your `master` branch
-* Open a pull request to this repository
-* Submit on canvas a question and observation,your original estimate, how long you spent, and a link to your pull request
+**Author**: Mario Flores Jr.
 
-## Requirements
-#### Configuration
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **__test__/** -- directory for holding your programs unit and integration tests
+**Version**: 1.0.0
 
-#### Testing
-  * write at least three test assertions for each method of the Stack and Queue List Data Structures
-  * organize your tests into appropriate describe/test blocks for test output readability
+## Overview
 
-####  Documentation
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+This lab is an exercise in implementing a stack as a Linked List. The stack itself is a first in/first out (FIFO) data structure.
 
-#### Feature Tasks
-  * implement a Stack Class  using,internally, a Linked List class
-  * implement `push(value)` and `pop()` methods on the Stack class
-	* implement `peek()` and `isEmpty()` methods on the Stack class
+# Getting Started
 
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+Install dependencies referenced in Architecture, in the terminal type:
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+```npm i -D <dependencies>```
+
+To run tests, in terminal type:
+
+```npm run test```
+
+## Stack Methods Documentation
+
+```push(value)```
+
+- The push method will inserts a node at the head of the Linked List, becoming the most recently pushed node.
+
+```pop()```
+
+- The most recently pushed node will be removed with the pop method, and the next value in the stack will then be reassigned to the top.
+
+```peek(value)```
+
+- The peek method will *only* return the value of the top of the stack, leaving the node in place and the stack unchanged. 
+
+```isEmpty()```
+
+- This method will check if the stack is empty, and will return a boolean response (empty stack returns true).
+
+## Architecture
+
+JavaScript, jest, eslint, babel
